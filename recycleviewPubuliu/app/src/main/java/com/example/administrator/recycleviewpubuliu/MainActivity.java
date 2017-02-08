@@ -2,6 +2,9 @@ package com.example.administrator.recycleviewpubuliu;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 
@@ -28,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
 //        GridLayoutManager     等同gridview
 //        StaggeredGridLayoutManager 瀑布流的方式
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
+//        recyclerView.setLayoutManager(new GridLayoutManager(this,3));
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
         adapter = new MasonryAdapter(productList) ;
         recyclerView.setAdapter(adapter);
 
