@@ -23,9 +23,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         recyclerView = (RecyclerView) this.findViewById(R.id.recycler);
+//       RecyclerView本身提供了三个LayoutManager的实现：
+//        LinearLayoutManager  等同一般的listview
+//        GridLayoutManager     等同gridview
+//        StaggeredGridLayoutManager 瀑布流的方式
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
         adapter = new MasonryAdapter(productList) ;
         recyclerView.setAdapter(adapter);
+
+        //给每个item设置外边距
         recyclerView.addItemDecoration(new SpacesItemDecoration(16));
     }
 
