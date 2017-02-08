@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) this.findViewById(R.id.recycler);
 //       RecyclerView本身提供了三个LayoutManager的实现：
 //        LinearLayoutManager  等同一般的listview
-//        GridLayoutManager     等同gridview
+//        GridLayoutManager     等同gridviews
 //        StaggeredGridLayoutManager 瀑布流的方式
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL));
 //        recyclerView.setLayoutManager(new GridLayoutManager(this,3));
 //        recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -59,6 +59,13 @@ public class MainActivity extends AppCompatActivity {
         productList.add(new Product(R.drawable.h,"h"));
         productList.add(new Product(R.drawable.i,"i"));
         productList.add(new Product(R.drawable.j,"j"));
+        productList.add(new Product(R.drawable.k,"k"));
+        productList.add(new Product(R.drawable.l,"l"));
+        productList.add(new Product(R.drawable.m,"m"));
+        productList.add(new Product(R.drawable.n,"n"));
+        productList.add(new Product(R.drawable.o,"o"));
+        productList.add(new Product(R.drawable.p,"p"));
+        productList.add(new Product(R.drawable.q,"q"));
 
         adapter.notifyDataSetChanged();
     }
